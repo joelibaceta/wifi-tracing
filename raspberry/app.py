@@ -33,11 +33,10 @@ def get_distances():
 
       counter += 1
 
-      print(cell["essid"])
+      print(f'{cell["essid"]}: {distance}')
       # print(cell["signal_quality"])
       # print(cell["signal_total"])
-      # print(cell["signal_level_dBm"])
-      print(distance)
+      # print(cell["signal_level_dBm"]) 
 
   payload = {"distances": distances}
 
