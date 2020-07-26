@@ -2,9 +2,6 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
-  div.dibujo-canvas
-    canvas#mylienzo.lienzo-demo
 
   div#tracingsvg.tracingsvg
     svg(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1013' height='619' viewbox='0 0 1013 619')
@@ -51,10 +48,12 @@ block content
           tspan(x='0' y='0') Room
         text#Bathroom(transform='translate(467 469)' fill='#707070' font-size='10' font-family='HelveticaNeue-Bold, Helvetica Neue' font-weight='700')
           tspan(x='0' y='0') Bathroom
-      each element in points
-        g(id='#{element.name}' data-name='Rectángulo #{element.name}' transform='translate(#{element.translate})' fill='none' stroke='#{element.color}' stroke-width='2')
-          rect(width='20' height='20' rx='10' stroke='none')
-          rect(x='1' y='1' width='18' height='18' rx='9' fill='none')
+        each element in points
+          g(id=element.name data-name=element.name transform='translate(' + element.translate + ')' fill='none' stroke=element.color stroke-width='2')
+            rect(width='20' height='20' rx='10' stroke='none')
+            rect(x='1' y='1' width='18' height='18' rx='9' fill='none')
+
+
 
   script(type="text/javascript" src='/javascripts/demo.js')
 
