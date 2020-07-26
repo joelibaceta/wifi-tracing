@@ -17,10 +17,9 @@ router.get('/snapshot', function(req, res, next){
 });
 
 router.get('/lasted', async function(req, res, next){
-
   const lasted = await Position.find().sort({$natural:-1}).limit(1);
   res.json(lasted[0]);
-});
+ });
 
 
  
