@@ -22,7 +22,6 @@ This demo contains:
 
   Trilateration allow us to estimate position coordinates using distances from recerence points.
 
-  ![](doc/images/trilateration.jpg)
 
   ```javascript
     A = 2*x2 - 2*x1
@@ -39,6 +38,8 @@ This demo contains:
 3. Store position trought the time
 
   Using mongodb as data wharehouse
+
+  ![](doc/images/db_screenshot.png)
 
 
 ## Applications
