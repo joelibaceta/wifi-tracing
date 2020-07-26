@@ -6,6 +6,8 @@ Inspired by [bluetrace](https://bluetrace.io/)
 
 This alternative propose to use a mutiple wifi signal strength measurements to triangulate the positions within a physical location.
 
+Serve data with indoor x,y positions for contact tracing
+
 This demo contains: 
 
 - An android and raspberry aplications as end user applications.
@@ -74,6 +76,8 @@ def dbm2m(frequency, dBm):
 ## User interfaces
 
   ![](doc/images/user_interfaces_4.png)
+
+
 
 ## References
 
