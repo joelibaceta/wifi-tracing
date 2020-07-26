@@ -9,6 +9,6 @@ This alternative propose to use a mutiple wifi signal strength measurements to t
 This demo contains: 
 
 - An android and raspberry aplications as end user applications.
-- A website to monitor the people position in a floorplan. (Just as proof of concept)
+- A website to monitor the people position in a floorplan. (For demo purpose only)
 - A backend where historical positioning data is stored
 
