@@ -43,8 +43,8 @@ def get_distances():
 
   payload = {"distances": [
     distances["dlink-FA14"],
-    distances["ADMIN*"],
-    distances["Internet Joel"]
+    distances["ADMIN*"] / 2,
+    distances["Internet Joel"] 
   ], "id": "raspberry"}
 
   r = requests.post(uri, data=payload)
