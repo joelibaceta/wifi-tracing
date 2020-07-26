@@ -1,3 +1,4 @@
+from time import sleep
 from lib import iwlist
 from lib import calc
 
