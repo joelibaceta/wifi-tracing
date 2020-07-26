@@ -41,6 +41,8 @@ def get_distances():
 
   r = requests.post(uri, data=payload)
 
+  print(r.text)
+
 while(True):
   sleep(5)
   get_distances()
