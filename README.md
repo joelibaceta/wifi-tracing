@@ -35,7 +35,7 @@ registerReceiver(wifiScanReceiver, intentFilter);
 wifiManager.startScan();
 ```
 
-Convert from dBm to meters in a simplified escenario
+### Convert from dBm to meters in a simplified escenario
 
 ```python
 def dbm2m(frequency, dBm): 
