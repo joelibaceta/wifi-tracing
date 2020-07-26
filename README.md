@@ -35,6 +35,15 @@ registerReceiver(wifiScanReceiver, intentFilter);
 wifiManager.startScan();
 ```
 
+Convert from dBm to meters in a simplified escenario
+
+```python
+def dbm2m(frequency, dBm): 
+  FSPL = 27.55 #Free-Space Path Loss 
+  m = 10 ** (( FSPL - (20 * log10(frequency)) + abs(dBm) ) / 20 ) 
+  return round(m, 2)
+```
+
 2. Use 2d trilateration algorithm to get x, y position estimation in the floorplan
 
   Trilateration allow us to estimate position coordinates using distances from recerence points.
