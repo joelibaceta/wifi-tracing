@@ -16,22 +16,16 @@ regexps = [
 wpaRe = re.compile(r"IE:\ WPA\ Version\ 1$")
 wpa2Re = re.compile(r"IE:\ IEEE\ 802\.11i/WPA2\ Version\ 1$")
 
-# Runs the comnmand to scan the list of networks.
-# Must run as super user.
-# Does not specify a particular device, so will scan all network devices.
 def scan(interface='wlan0'):
     cmd = ["iwlist", interface, "scan"]
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    points = proc.stdout.read().decode('utf-8')
-    print(points)
-    return points
+    points = proc.stdout.read().decode('utf-8') 
+    return points 
 
-# Parses the response from the command "iwlist scan"
 def parse(content):
     cells = []
     lines = content.split('\n')
-    for line in lines:
-        print(line)
+    for line in lines: 
         line = line.strip()
         cellNumber = cellNumberRe.search(line)
         if cellNumber is not None:
