@@ -12,13 +12,32 @@ REFERENCE_NETWORKS = [
   "Internet Joel"
 ]
 
-for cell in cells:
-  if cell["essid"] in REFERENCE_NETWORKS:
-    mhz = float(cell["frequency"]) * 1000
-    dbm = float(cell["signal_level_dBm"]) 
-    distance = calc.dbm2m(mhz, dbm)
-    print(cell["essid"])
-    print(cell["signal_quality"])
-    print(cell["signal_total"])
-    print(cell["signal_level_dBm"])
-    print(distance)
+def get_distances():
+  counter = 0
+  distances = []
+  
+  uri = "http://198.199.73.28:3000/positions/save"
+
+  for cell in cells:
+    if cell["essid"] in REFERENCE_NETWORKS:
+      mhz = float(cell["frequency"]) * 1000
+      dbm = float(cell["signal_level_dBm"]) 
+      distance = calc.dbm2m(mhz, dbm)
+
+      distances[counter] = distance
+
+      counter += 1
+
+      # print(cell["essid"])
+      # print(cell["signal_quality"])
+      # print(cell["signal_total"])
+      # print(cell["signal_level_dBm"])
+      # print(distance)
+
+  payload = {"distances": distances}
+
+  r = requests.post(uri, data=payload)
+
+while(True):
+  sleep(5)
+  get_distances()
