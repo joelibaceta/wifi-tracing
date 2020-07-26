@@ -18,11 +18,23 @@ This demo contains:
 
 ![](doc/images/Sample.svg)
 
-2. Use 2d trilateration to get x, y position estimation in the floorplan
+2. Use 2d trilateration algorithm to get x, y position estimation in the floorplan
 
   Trilateration allow us to estimate position coordinates using distances from recerence points.
 
   ![](doc/images/trilateration.jpg)
+
+  ```javascript
+    A = 2*x2 - 2*x1
+    B = 2*y2 - 2*y1
+    C = r1**2 - r2**2 - x1**2 + x2**2 - y1**2 + y2**2
+    D = 2*x3 - 2*x2
+    E = 2*y3 - 2*y2
+    F = r2**2 - r3**2 - x2**2 + x3**2 - y2**2 + y3**2
+
+    x = (C*E - F*B) / (E*A - B*D)
+    y = (C*D - A*F) / (B*D - A*E)
+  ```
 
 3. Store position trought the time
 
