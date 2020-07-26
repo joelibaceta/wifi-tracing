@@ -40,7 +40,7 @@ This demo contains:
 
   Using mongodb as data wharehouse
 
-  ![](doc/images/db_screenshot.png)
+  ![](doc/images/db_screenshot_2.png)
 
 
 ## User interfaces
