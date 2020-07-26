@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+const Position = require('../models/position.model')
+
 
 HARD_CODED_ROUTER_POSITIONS = [
   {"x": 4.5, "y": 4},
@@ -37,6 +39,15 @@ router.post('/save', function(req, res, next) {
   y = (C*D - A*F) / (B*D - A*E)
 
   console.log("x: " + x + " y: " + y)
+
+  position_data = {
+    "id": req.body.id,
+    "x": x,
+    "y": y
+  }
+
+  let newPosition = new Position(position_data);
+  newPosition.save()
 
   res.json({x: x, y: y});
 });
