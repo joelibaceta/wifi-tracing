@@ -30,6 +30,7 @@ def parse(content):
     cells = []
     lines = content.split('\n')
     for line in lines:
+        print(line)
         line = line.strip()
         cellNumber = cellNumberRe.search(line)
         if cellNumber is not None:
