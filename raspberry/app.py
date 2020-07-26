@@ -31,7 +31,7 @@ def get_distances():
 
       counter += 1
 
-      # print(cell["essid"])
+      print(cell["essid"])
       # print(cell["signal_quality"])
       # print(cell["signal_total"])
       # print(cell["signal_level_dBm"])
