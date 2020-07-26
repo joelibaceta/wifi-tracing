@@ -20,7 +20,7 @@ This demo contains:
 
 2. Use 2d trilateration to get x, y position estimation in the floorplan
 
-![](docs/images/trilateration.jpg)
+![](doc/images/trilateration.jpg)
 
 ## References
 
