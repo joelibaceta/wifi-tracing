@@ -134,7 +134,7 @@ def main():
     cells=[[]]
     parsed_cells=[]
 
-    proc = subprocess.Popen(["iwlist", interface, "scan"],stdout=subprocess.PIPE, universal_newlines=True)
+    proc = subprocess.Popen(["iw", interface, "scan"],stdout=subprocess.PIPE, universal_newlines=True)
     out, err = proc.communicate()
 
     for line in out.split("\n"):
