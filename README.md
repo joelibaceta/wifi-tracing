@@ -22,6 +22,7 @@ This demo contains:
 
   Trilateration allow us to estimate position coordinates using distances from recerence points.
 
+  ![](doc/images/trilateration.jpg)
 
   ```javascript
     A = 2*x2 - 2*x1
@@ -42,11 +43,9 @@ This demo contains:
   ![](doc/images/db_screenshot.png)
 
 
-## Applications
+## User interfaces
 
-### Raspberry
-
-![](doc/images/raspberry-screenshot.png)
+  ![](doc/images/user_interfaces.png)
 
 ## References
 
