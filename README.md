@@ -37,6 +37,8 @@ wifiManager.startScan();
 
 ### Convert from dBm to meters in a simplified escenario
 
+![](doc/images/friis_eq.png)
+
 ```python
 def dbm2m(frequency, dBm): 
   FSPL = 27.55 #Free-Space Path Loss 

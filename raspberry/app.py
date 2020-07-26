@@ -40,7 +40,11 @@ def get_distances():
       # print(cell["signal_total"])
       # print(cell["signal_level_dBm"]) 
 
-  payload = {"distances": distances, "id": "raspberry"}
+  payload = {"distances": [
+    distances[1],
+    distances[0],
+    distances[2]
+  ], "id": "raspberry"}
 
   r = requests.post(uri, data=payload)
 
