@@ -40,7 +40,12 @@ This demo contains:
 
   Using mongodb as data wharehouse
 
-  
+
+## Applications
+
+### Raspberry
+
+![](doc/images/raspberry-screenshot.png)
 
 ## References
 
