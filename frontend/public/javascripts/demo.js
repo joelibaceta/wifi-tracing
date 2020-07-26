@@ -1,20 +1,33 @@
-console.log('gaaaaa!');
-    ej1 = document.getElementById("mylienzo"); //Asigno a una variable el elemento del html que voy a usar
-    lienzo1 = ej1.getContext("2d"); //Alisto el canvas para que funcione
-    lienzo1.lineWidth = 2; //Defino el ancho de la linea en pixeles
-    lienzo1.strokeStyle = '#000000'; //Defino el color en hexagesimal
+setInterval(function () {
+    getLastLocaleWifi();
+}, 3000);
 
-// PRINT EJE X
-    lienzo1.beginPath(); // Pongo el lápiz
-    lienzo1.moveTo(150, 0); // lo ubicó para iniciar el dibujo
-    lienzo1.lineTo(150, 300); // trazo la linea hasta este punto
-    lienzo1.stroke(); // levanto el lápiz
-    lienzo1.closePath(); // me alisto para realizar otra parte del dibujo
 
-//PRINT EJE Y
-    lienzo1.beginPath(); // Pongo el lápiz
-    lienzo1.moveTo(10, 150 );// lo ubicó para iniciar el dibujo
-    lienzo1.lineTo(300, 150);// trazo la linea hasta este punto
-    lienzo1.stroke();// levanto el lápiz
-    lienzo1.closePath();// me alisto para realizar otra parte del dibujo
+async function getLastLocaleWifi() {
+    let response = await fetch('http://localhost:3000/users');
+
+    if (response.ok) { // if HTTP-status is 200-299
+        // get the response body (the method explained below)
+        let json = await response.json();
+        printPointsInToSVG(json)
+    } else {
+        alert("HTTP-Error: " + response.status);
+    }
+}
+
+function printPointsInToSVG(item) {
+    var x = item.x - 8.5;
+    var y = item.x - 8.5;
+    var element = document.getElementById("People");
+    element.setAttribute("transform", 'translate(' + item.x + ' ' + item.y + ')');
+    /*
+    var line1 = document.getElementById("Línea_1");
+    line1.setAttribute("transform", 'translate(' + item.x + ' ' + item.x + ')');
+    var line2 = document.getElementById("Línea_2");
+    line2.setAttribute("transform", 'translate(' + item.x + ' ' + item.x + ')');
+    var line3 = document.getElementById("Línea_3");
+    line3.setAttribute("transform", 'translate(' + item.x + ' ' + item.x + ')');
+    // circle#People(data-name='People 2' cx='8.5' cy='8.5' r='8.5' transform='translate(413 121)' fill='#6db979')
+     */
+}
 

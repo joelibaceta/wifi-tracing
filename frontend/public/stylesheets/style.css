@@ -6,13 +6,3 @@ body {
 a {
   color: #00B7FF;
 }
-
-.dibujo-canvas {
-  background: aliceblue;
-}
-
-.lienzo-demo {
-  background: blueviolet;
-  height: 300px;
-  width: 300px;
-}
