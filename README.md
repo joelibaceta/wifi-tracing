@@ -45,7 +45,7 @@ This demo contains:
 
 ## User interfaces
 
-  ![](doc/images/user_interfaces.png)
+  ![](doc/images/user_interfaces_2.png)
 
 ## References
 
