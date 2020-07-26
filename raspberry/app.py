@@ -4,8 +4,7 @@ from lib import calc
 
 import requests
 
-content = iwlist.scan(interface='wlan0')
-cells = iwlist.parse(content)
+
 
 # For demo purpose only
 
@@ -16,6 +15,9 @@ REFERENCE_NETWORKS = [
 ]
 
 def get_distances():
+  content = iwlist.scan(interface='wlan0')
+  cells = iwlist.parse(content)
+
   counter = 0
   distances = []
   
