@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+
+
 const Position = require('../models/position.model')
 
 
@@ -11,7 +13,7 @@ HARD_CODED_ROUTER_POSITIONS = [
 ] 
 
 router.get('/snapshot', function(req, res, next){
-  
+
 });
 
 
@@ -44,10 +46,13 @@ router.post('/save', function(req, res, next) {
 
   console.log("x: " + x + " y: " + y)
 
+  let current_millies = new Date().getTime();
+
   position_data = {
     "id": req.body.id,
     "x": x,
-    "y": y
+    "y": y,
+    "timestamp": Long.fromNumber(current_millies)
   }
 
   let newPosition = new Position(position_data);
