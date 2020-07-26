@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
     { translate: '708 330', color: '#f60600', name: '3'}
   ];
 
-  res.render('index', { title: 'Express', points });
+  res.render('index', { title: 'Contact Tracing!', points });
 });
 
 module.exports = router;
