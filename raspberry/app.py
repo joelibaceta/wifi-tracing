@@ -15,7 +15,8 @@ REFERENCE_NETWORKS = [
 for cell in cells:
   if cell["essid"] in REFERENCE_NETWORKS:
     mhz = float(cell["frequency"]) * 1000
-    distance = calc.dbm2m(mhz, signal_level_dBm)
+    dbm = float(cell["signal_level_dBm"]) * 1000
+    distance = calc.dbm2m(mhz, dbm)
     print(cell["essid"])
     print(cell["signal_quality"])
     print(cell["signal_total"])
