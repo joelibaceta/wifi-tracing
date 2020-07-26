@@ -17,5 +17,5 @@ This demo contains:
 - [User Configurable Indoor
 Positioning System using WiFi
 Trilateration and Fingerprinting](https://www.diva-portal.org/smash/get/diva2:1105921/FULLTEXT02)
-- [On Improved Projection Techniques to Support Visual Exploration of Multidimensional DataSets][http://repositorio.icmc.usp.br/bitstream/handle/RIICMC/6868/relatorio_207.pdf?sequence=1http://repositorio.icmc.usp.br/bitstream/handle/RIICMC/6868/relatorio_207.pdf?sequence=1]
+- [On Improved Projection Techniques to Support Visual Exploration of Multidimensional DataSets](http://repositorio.icmc.usp.br/bitstream/handle/RIICMC/6868/relatorio_207.pdf?sequence=1http://repositorio.icmc.usp.br/bitstream/handle/RIICMC/6868/relatorio_207.pdf?sequence=1)
 
