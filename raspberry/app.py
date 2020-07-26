@@ -25,7 +25,7 @@ def get_distances():
       dbm = float(cell["signal_level_dBm"]) 
       distance = calc.dbm2m(mhz, dbm)
 
-      distances[counter] = distance
+      distances.append(distance)
 
       counter += 1
 
