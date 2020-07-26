@@ -6,5 +6,5 @@ def dbm2m(frequency, dBm):
 
   m = 10 ** (( FSPL - (20 * log10(frequency)) + dBm ) / 20 )
 
-  return m
+  return round(m, 2)
    
