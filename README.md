@@ -24,8 +24,6 @@ Trilateration allow us to estimate position coordinates using distances from rec
 
 ![](doc/images/trilateration.jpg)
 
-![](doc/images/2d-trilateration.jpg)
-
 ## References
 
 - [User Configurable Indoor
