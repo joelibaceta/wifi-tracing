@@ -20,7 +20,11 @@ This demo contains:
 
 2. Use 2d trilateration to get x, y position estimation in the floorplan
 
+Trilateration allow us to estimate position coordinates using distances from recerence points.
+
 ![](doc/images/trilateration.jpg)
+
+![](doc/images/2d-trilateration.jpg)
 
 ## References
 
