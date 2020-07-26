@@ -2,6 +2,8 @@ from time import sleep
 from lib import iwlist
 from lib import calc
 
+import requests
+
 content = iwlist.scan(interface='wlan0')
 cells = iwlist.parse(content)
 
