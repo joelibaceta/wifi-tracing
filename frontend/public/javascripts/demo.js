@@ -18,6 +18,10 @@ async function getLastLocaleWifi() {
 
 function printPointsInToSVG(item) {
      var element = document.getElementById("People");
-    element.setAttribute("transform", 'translate(' + item.x + ' ' + item.y + ')');
+
+     var x = 1000 / item.x * 100
+     var y = 600 / item.y * 20
+
+    element.setAttribute("transform", 'translate(' + x + ' ' + y + ')');
 }
 
