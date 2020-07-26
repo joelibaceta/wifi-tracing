@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ContacTracing</string>
+
+    <string name="show_title_settings">ALTO</string>
+    <string name="show_button_settings">CONFIGURACIÓN</string>
+    <string name="show_message_settings_GPS">Antes de continuar por favor ACTIVE SU GPS para el correcto funcionamiento de la aplicación.</string>
+    <string name="show_message_settings">" Antes de continuar por favor acepte todos los permisos necesarios para el correcto funcionamiento de la aplicación.</string>
+
+</resources>
