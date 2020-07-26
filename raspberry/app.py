@@ -19,7 +19,7 @@ def get_distances():
   cells = iwlist.parse(content)
 
   counter = 0
-  distances = []
+  distances = {}
   
   uri = "http://198.199.73.28:3000/positions/save"
 
@@ -27,13 +27,14 @@ def get_distances():
     if cell["essid"] in REFERENCE_NETWORKS:
       mhz = float(cell["frequency"]) * 1000
       dbm = float(cell["signal_level_dBm"]) 
+      essid = cell["essid"]
+
       distance = calc.dbm2m(mhz, dbm)
 
-      distances.append(distance)
+      distances[essid] = distance
 
       counter += 1
 
-      essid = cell["essid"]
 
       print(essid + ":" +  str(distance))
       # print(cell["signal_quality"])
@@ -41,9 +42,9 @@ def get_distances():
       # print(cell["signal_level_dBm"]) 
 
   payload = {"distances": [
-    distances[1],
-    distances[0],
-    distances[2]
+    distances["dlink-FA14"],
+    distances["ADMIN*"],
+    distances["Internet Joel"]
   ], "id": "raspberry"}
 
   r = requests.post(uri, data=payload)
