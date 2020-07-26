@@ -4,8 +4,8 @@ setInterval(function () {
 
 
 async function getLastLocaleWifi() {
-    //let response = await fetch('http://localhost:3000/users');
-    let response = await fetch('http://localhost:3000/positions/lasted');
+    // let response = await fetch('http://localhost:3000/positions/lasted');
+    let response = await fetch('http://198.199.73.28:3000/positions/lasted');
 
     if (response.ok) { // if HTTP-status is 200-299
         // get the response body (the method explained below)
@@ -24,14 +24,5 @@ function printPointsInToSVG(item) {
 
     var element = document.getElementById("People");
     element.setAttribute("transform", 'translate(' + item.x + ' ' + item.y + ')');
-    /*
-    var line1 = document.getElementById("Línea_1");
-    line1.setAttribute("transform", 'translate(' + item.x + ' ' + item.x + ')');
-    var line2 = document.getElementById("Línea_2");
-    line2.setAttribute("transform", 'translate(' + item.x + ' ' + item.x + ')');
-    var line3 = document.getElementById("Línea_3");
-    line3.setAttribute("transform", 'translate(' + item.x + ' ' + item.x + ')');
-    // circle#People(data-name='People 2' cx='8.5' cy='8.5' r='8.5' transform='translate(413 121)' fill='#6db979')
-     */
 }
 
