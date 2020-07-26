@@ -18,12 +18,21 @@ This demo contains:
 
 ![](doc/images/Sample.svg)
 
+Python
 ```python
 def scan(interface='wlan0'):
     cmd = ["iwlist", interface, "scan"]
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     points = proc.stdout.read().decode('utf-8') 
     return points 
+```
+
+Android
+```java
+IntentFilter intentFilter = new IntentFilter();
+intentFilter.addAction(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION);
+registerReceiver(wifiScanReceiver, intentFilter);
+wifiManager.startScan();
 ```
 
 2. Use 2d trilateration algorithm to get x, y position estimation in the floorplan
