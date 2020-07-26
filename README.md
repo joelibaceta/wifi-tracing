@@ -18,6 +18,32 @@ This demo contains:
 
 ![](doc/images/Sample.svg)
 
+Python
+```python
+def scan(interface='wlan0'):
+    cmd = ["iwlist", interface, "scan"]
+    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    points = proc.stdout.read().decode('utf-8') 
+    return points 
+```
+
+Android
+```java
+IntentFilter intentFilter = new IntentFilter();
+intentFilter.addAction(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION);
+registerReceiver(wifiScanReceiver, intentFilter);
+wifiManager.startScan();
+```
+
+### Convert from dBm to meters in a simplified escenario
+
+```python
+def dbm2m(frequency, dBm): 
+  FSPL = 27.55 #Free-Space Path Loss 
+  m = 10 ** (( FSPL - (20 * log10(frequency)) + abs(dBm) ) / 20 ) 
+  return round(m, 2)
+```
+
 2. Use 2d trilateration algorithm to get x, y position estimation in the floorplan
 
   Trilateration allow us to estimate position coordinates using distances from recerence points.
@@ -40,12 +66,12 @@ This demo contains:
 
   Using mongodb as data wharehouse
 
+  ![](doc/images/db_screenshot_2.png)
 
-## Applications
 
-### Raspberry
+## User interfaces
 
-![](doc/images/raspberry-screenshot.png)
+  ![](doc/images/user_interfaces_4.png)
 
 ## References
 
