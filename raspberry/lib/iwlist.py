@@ -12,7 +12,6 @@ regexps = [
     re.compile(r"^Signal level=(?P<signal_quality>\d+)/(?P<signal_total>\d+).*$"),
 ]
 
-# Detect encryption type
 wpaRe = re.compile(r"IE:\ WPA\ Version\ 1$")
 wpa2Re = re.compile(r"IE:\ IEEE\ 802\.11i/WPA2\ Version\ 1$")
 
