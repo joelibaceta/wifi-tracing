@@ -73,7 +73,9 @@ def dbm2m(frequency, dBm):
   ![](doc/images/db_screenshot_2.png)
 
 
-## User interfaces
+## User interfaces alternatives
+
+  You can use it as an android application  or with a raspberry in an IOT Context
 
   ![](doc/images/user_interfaces_4.png)
 
