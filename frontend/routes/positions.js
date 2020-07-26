@@ -3,8 +3,8 @@ var router = express.Router();
 
 
 HARD_CODED_ROUTER_POSITIONS = [
-  {"x": 0, "y": 0},
   {"x": 4.5, "y": 4},
+  {"x": 0, "y": 0},
   {"x": 7, "y": 4},
 ] 
 
