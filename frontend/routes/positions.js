@@ -9,7 +9,7 @@ HARD_CODED_ROUTER_POSITIONS = [
 ] 
 
 
-router.get('/save', function(req, res, next) {
+router.post('/save', function(req, res, next) {
 
   points = HARD_CODED_ROUTER_POSITIONS // For demo purpose only
   
