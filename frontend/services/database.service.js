@@ -2,12 +2,12 @@
 
 const mongoose = require('mongoose');
 
-params = {
+let params = {
   dbUser:  "dbuser",
   dbPassword: "securepassword",
-  dbHost: "cluster0.qyvjh.mongodb.net",
+  dbHost: "cluster0.daynf.mongodb.net",
   dbPort: "",
-  dbName: "wifitracing"
+  dbName: "wifitracingdb"
 }
 
 const MONGO_URI = `mongodb+srv://${params.dbUser}:${params.dbPassword}@${params.dbHost}:${params.dbPort}/${params.dbName}?retryWrites=true&w=majority`;

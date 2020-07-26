@@ -47,9 +47,19 @@ router.post('/save', function(req, res, next) {
   }
 
   let newPosition = new Position(position_data);
-  newPosition.save()
+  newPosition.save(function(err) {
+      if (err) {
+          // you could avoid http status if you want. I put error 500 
+          return res.status(500).send({
+              success: false,
+              message: err
+          });
+      }
 
-  res.json({x: x, y: y});
+      res.json({x: x, y: y});
+  });
+
+  
 });
 
 module.exports = router;

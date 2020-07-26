@@ -8,7 +8,11 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var positionsRouter = require('./routes/positions');
 
+const serviceDatabase = require('./services/database.service');
+
 var app = express();
+
+serviceDatabase.initialize();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
