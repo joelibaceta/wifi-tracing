@@ -1,2 +1,1 @@
-# wifi-tracing
-A contact tracing hackaton idea
+![](doc/images/project_banner.svg)
