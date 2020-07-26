@@ -10,6 +10,10 @@ HARD_CODED_ROUTER_POSITIONS = [
   {"x": 7, "y": 4},
 ] 
 
+router.get('/snapshot', function(req, res, next){
+  
+});
+
 
  
 router.post('/save', function(req, res, next) { 
