@@ -7,7 +7,7 @@ let PositionSchema = new Schema({
     id: {type: String, required: [true, 'The id is required.']},
     x: {type: String, required: [true, 'The x is required.']},
     y: {type: String, required: [true, 'The y is required.']},
-    timestamp: {type: Long},
+    timestamp: {type: Date, default: Date.now },
     created_at: {type: String}
 }); 
 

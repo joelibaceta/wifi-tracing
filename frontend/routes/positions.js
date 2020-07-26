@@ -51,8 +51,7 @@ router.post('/save', function(req, res, next) {
   position_data = {
     "id": req.body.id,
     "x": x,
-    "y": y,
-    "timestamp": Long.fromNumber(current_millies)
+    "y": y
   }
 
   let newPosition = new Position(position_data);
