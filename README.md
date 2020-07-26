@@ -18,6 +18,14 @@ This demo contains:
 
 ![](doc/images/Sample.svg)
 
+```python
+def scan(interface='wlan0'):
+    cmd = ["iwlist", interface, "scan"]
+    proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    points = proc.stdout.read().decode('utf-8') 
+    return points 
+```
+
 2. Use 2d trilateration algorithm to get x, y position estimation in the floorplan
 
   Trilateration allow us to estimate position coordinates using distances from recerence points.
