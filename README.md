@@ -4,7 +4,7 @@ Inspired by [bluetrace](https://bluetrace.io/)
 
 <br />
 
-This alternative propose to use a mutiple wifi signal strength measurements to triangulate the positions within a physical location.
+This alternative propose to use a mutiple wifi signal strength measurements to guess the positions within a physical location.
 
 Serve data with indoor x,y positions for contact tracing
 
