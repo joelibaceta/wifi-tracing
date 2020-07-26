@@ -12,6 +12,16 @@ This demo contains:
 - A website to monitor the people position in a floorplan. (For demo purpose only)
 - A backend where historical positioning data is stored
 
+## How it works?
+
+1. Get the distances from the main wifi points. 
+
+![](doc/images/Sample.svg)
+
+2. Use 2d trilateration to get x, y position estimation in the floorplan
+
+![](docs/trilateration.jpg)
+
 ## References
 
 - [User Configurable Indoor
