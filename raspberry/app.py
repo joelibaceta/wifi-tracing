@@ -35,7 +35,7 @@ def get_distances():
 
       essid = cell["essid"]
 
-      print(f"{essid}: {distance}")
+      print(essid + ":" +  str(distance))
       # print(cell["signal_quality"])
       # print(cell["signal_total"])
       # print(cell["signal_level_dBm"]) 
