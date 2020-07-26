@@ -37,7 +37,7 @@ registerReceiver(wifiScanReceiver, intentFilter);
 wifiManager.startScan();
 ```
 
-### Convert from dBm to meters in a simplified escenario
+### Convert from dBm to meters in a simplified escenario
 
 ![](doc/images/friis_eq.png)
 
