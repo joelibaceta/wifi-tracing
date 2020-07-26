@@ -1,2 +1,2 @@
 git pull origin master
-python3 test.py
+sudo python3 test.py
