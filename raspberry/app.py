@@ -37,7 +37,7 @@ def get_distances():
       # print(cell["signal_quality"])
       # print(cell["signal_total"])
       # print(cell["signal_level_dBm"])
-      # print(distance)
+      print(distance)
 
   payload = {"distances": distances}
 
