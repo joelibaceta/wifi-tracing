@@ -1,0 +1,51 @@
+Arguments: 
+  /Users/ypasoft/.nvm/versions/node/v11.15.0/bin/node /usr/local/Cellar/yarn/1.22.4/libexec/bin/yarn.js dev
+
+PATH: 
+  /usr/local/opt/php@7.3/bin:/usr/local/opt/libiconv/bin:/usr/local/sbin:/Users/ypasoft/.nvm/versions/node/v11.15.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  11.15.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/ypasoft/develop/wifi-tracing/frontend/package.json: Unexpected token < in JSON at position 278
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "contact-me",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+      "dev": "nodemon ./bin/www",
+      "start": "node ./bin/www"
+    },
+    "dependencies": {
+      "cookie-parser": "~1.4.4",
+      "debug": "~2.6.9",
+      "express": "~4.16.1",
+      "http-errors": "~1.6.3",
+  <<<<<<< HEAD
+  =======
+      "mongoose": "^5.9.25",
+  >>>>>>> 36cb0dfbdbdd743e6f512b7bd9641bd9eb83f1d2
+      "morgan": "~1.9.1",
+      "pug": "2.0.0-beta11"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
