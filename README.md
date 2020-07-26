@@ -8,6 +8,8 @@ This alternative propose to use a mutiple wifi signal strength measurements to t
 
 Serve data with indoor x,y positions for contact tracing
 
+![](doc/images/main_screenshot.png)
+
 This demo contains: 
 
 - An android and raspberry aplications as end user applications.
